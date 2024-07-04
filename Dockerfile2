@@ -1,0 +1,9 @@
+FROM golang:1.22-alpine 
+WORKDIR /app
+COPY go.* ./
+RUN go mod download
+COPY *.go ./
+RUN go build -o /godocker
+EXPOSE 8080
+ENV MONGODB_URI ""
+ENTRYPOINT ["/godocker"]

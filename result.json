@@ -1,0 +1,80 @@
+{
+  "SchemaVersion": 2,
+  "CreatedAt": "2024-07-04T11:36:31.087906+09:00",
+  "ArtifactName": "amolang/godocker:0.2",
+  "ArtifactType": "container_image",
+  "Metadata": {
+    "ImageID": "sha256:3c8daa86a711e9b0046340c01f5cb97b9eb60c6057f2da5bb0b05cd3920b9028",
+    "DiffIDs": [
+      "sha256:3564575a87914e82ab327baf3471331c037531f710a5e42c0bfb779e4eb0161e"
+    ],
+    "RepoTags": [
+      "amolang/godocker:0.2"
+    ],
+    "RepoDigests": [
+      "amolang/godocker@sha256:4c1a70fabb3577c085a276a370e3687973c086d017135b2483f8f1371042681a"
+    ],
+    "ImageConfig": {
+      "architecture": "arm64",
+      "created": "2024-07-04T11:16:31.753956092+09:00",
+      "history": [
+        {
+          "created": "2024-07-04T11:16:31.753956092+09:00",
+          "created_by": "WORKDIR /",
+          "comment": "buildkit.dockerfile.v0",
+          "empty_layer": true
+        },
+        {
+          "created": "2024-07-04T11:16:31.753956092+09:00",
+          "created_by": "COPY /godocker /godocker # buildkit",
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "created": "2024-07-04T11:16:31.753956092+09:00",
+          "created_by": "EXPOSE map[8080/tcp:{}]",
+          "comment": "buildkit.dockerfile.v0",
+          "empty_layer": true
+        },
+        {
+          "created": "2024-07-04T11:16:31.753956092+09:00",
+          "created_by": "ENV MONGODB_URI=mongodb://user:pass@172.17.0.5:27017",
+          "comment": "buildkit.dockerfile.v0",
+          "empty_layer": true
+        },
+        {
+          "created": "2024-07-04T11:16:31.753956092+09:00",
+          "created_by": "ENTRYPOINT [\"/godocker\"]",
+          "comment": "buildkit.dockerfile.v0",
+          "empty_layer": true
+        }
+      ],
+      "os": "linux",
+      "rootfs": {
+        "type": "layers",
+        "diff_ids": [
+          "sha256:3564575a87914e82ab327baf3471331c037531f710a5e42c0bfb779e4eb0161e"
+        ]
+      },
+      "config": {
+        "Entrypoint": [
+          "/godocker"
+        ],
+        "Env": [
+          "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+          "MONGODB_URI=mongodb://user:pass@172.17.0.5:27017"
+        ],
+        "WorkingDir": "/",
+        "ExposedPorts": {
+          "8080/tcp": {}
+        }
+      }
+    }
+  },
+  "Results": [
+    {
+      "Target": "godocker",
+      "Class": "lang-pkgs",
+      "Type": "gobinary"
+    }
+  ]
+}
